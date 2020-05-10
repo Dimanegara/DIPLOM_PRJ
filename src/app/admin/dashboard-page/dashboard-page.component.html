@@ -1,0 +1,26 @@
+<h1>Список всех новостей</h1>
+<table>
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Автор</th>
+            <th>Название</th>
+            <th>Дата</th>
+            <th>Действие</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let post of posts; let idx = index">
+            <td>{{idx + 1}}</td>
+            <td>{{post.author}}</td>
+            <td>{{post.title}}</td>
+            <td>{{post.date | date:'medium':null:'ru'}}</td>
+            <td>
+                <button class="btn btn-success open" [routerLink]="['/admin', 'post',post.id, 'edit']">
+                    Изменить
+                </button>
+                <button (click)="removeNews(post.id)" class="btn btn-danger">Удалить</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

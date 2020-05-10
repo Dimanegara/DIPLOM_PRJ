@@ -1,0 +1,11 @@
+<h2>Новостная сводка: </h2>
+<div *ngIf="posts$ | async as posts;else loading" class="posts">
+    <div class="row row-cols-1 row-cols-md-3">
+        <app-post *ngFor="let post of posts" [post]="post"></app-post>
+
+    </div>
+
+</div>
+<ng-template #loading>
+    <p>loading...</p>
+</ng-template>
