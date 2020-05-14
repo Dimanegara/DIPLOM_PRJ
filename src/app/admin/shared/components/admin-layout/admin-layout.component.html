@@ -1,5 +1,5 @@
-<nav class="navbar bg-primary">
-    <h1><a routerLink="/">Redactor's Panel</a></h1>
+<nav class="navbar bg-dark">
+    <h3><a routerLink="/">Redactor's Panel</a></h3>
     <ul *ngIf="auth.isAuthenticated()">
         <li routerLinkActive="active">
             <a [routerLink]="['/admin', 'dashboard']">Главная</a>

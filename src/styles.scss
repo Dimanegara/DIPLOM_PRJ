@@ -4,7 +4,7 @@
 
 :root {
   --primary-color: #dc3545;
-  --dark-color: #6e2121;
+  --dark-color: #746afd;
   --light-color: #f4f4f4;
   --danger-color: #dc3545;
   --success-color: #28a745;
@@ -178,6 +178,7 @@ table th {
   justify-content: space-between;
   align-items: center;
   padding: 0.7rem 2rem;
+  height: 55px;
   z-index: 1;
   width: 100%;
   opacity: 0.9;

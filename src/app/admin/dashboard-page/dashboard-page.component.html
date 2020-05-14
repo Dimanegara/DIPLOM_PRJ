@@ -4,9 +4,9 @@
         <tr>
             <th>#</th>
             <th>Автор</th>
-            <th>Название</th>
+            <th>Заголовок</th>
             <th>Дата</th>
-            <th>Действие</th>
+            <th>Управление</th>
         </tr>
     </thead>
     <tbody>
@@ -16,7 +16,7 @@
             <td>{{post.title}}</td>
             <td>{{post.date | date:'medium':null:'ru'}}</td>
             <td>
-                <button class="btn btn-success open" [routerLink]="['/admin', 'post',post.id, 'edit']">
+                <button class="btn btn-dark open mb-1" [routerLink]="['/admin', 'post',post.id, 'edit']">
                     Изменить
                 </button>
                 <button (click)="removeNews(post.id)" class="btn btn-danger">Удалить</button>
